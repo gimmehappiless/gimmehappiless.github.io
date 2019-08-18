@@ -1,0 +1,547 @@
+
+body{
+    background:#fefdf5;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.navbar-custom{
+    background-color:#fefdf5 !important; 
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:99;
+}
+
+a{
+    margin-top:18px;
+    margin-left:8vmin;
+}
+
+ul{
+    font-family:"Ubuntu";
+    letter-spacing: 2px;
+    font-weight:700;
+    font-size:26px;
+    margin-right:2vmin;
+    
+    
+}
+
+li{
+    margin-left:25px;
+    
+}
+
+.branding{
+    color:#ee6352 !important;
+}
+
+.branding:hover{
+    border-bottom: 2px solid #ee6352;
+  
+}
+
+.product{
+    color:#3fa7d6 !important;
+}
+
+.product:hover{
+    border-bottom: 2px solid #3fa7d6;
+}
+
+.message{
+    color:#f8c05e !important;
+}
+
+.message:hover{
+    border-bottom: 2px solid #f8c05e;
+}
+
+/* @font-face {
+    font-family: abc;
+    src: url("/CooperLtBTBold.ttf") format("truetype");
+    
+}
+
+h1 { 
+    font-family: abc, serif;
+    font-size: 11vmin;
+    text-align:left;
+    color:#ee6352;
+    margin-left:4vmin;
+    font-weight:bold;
+} */
+
+
+.logo{
+    width:100%;
+    height:auto;
+}
+
+.sidenav {
+    height:100%; /* Full-height: remove this if you want "auto" height */
+    width:20%; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    margin:0 auto;
+    background-color:#fefdf5; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    top:40%;
+    left:6%;
+}
+
+  .sidenav a {
+    display:block;
+    width:100%;
+    position:relative;
+    text-transform:uppercase;
+    color: #686868;
+    font-family: "Ubuntu";
+    font-style: italic;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.72px;
+    text-align: center;
+    text-decoration:none;
+    font-size:18px;
+    margin:10% auto;
+    
+  }
+
+  
+  
+  h3::before{
+      content:'';
+      position:absolute;
+      top:0;
+      right:0;
+      bottom:0;
+      left:0px;
+      background-color:#979797;
+      display:none;
+  }
+
+  h3:hover::before{
+    content:'';
+    position:absolute;
+    top:94%;
+    right:0;
+    bottom:0;
+    left:23%;
+    height:2px;
+    width:50%;
+    background-color:#979797;
+    display:flex;
+}
+
+.content{
+    position:absolute;
+    top:30vh;
+    left:33vw;
+    right:0;
+    bottom:0;
+    height:85vh;
+    width:90vh;
+}
+
+.top{
+    margin:20vh 0;
+    width:60vw;
+    height:70vh;
+}
+ img{
+     object-fit: cover;
+ }
+
+ .top .card{
+     top:0;
+     background-color:#fefdf5;
+     border:0px;
+     position:relative;
+    
+ }
+
+ .card-img-top{
+    background-color: #fefdf5;
+    width:80%;
+    height:80%;
+    margin-left:12px;
+     
+ }
+
+ .top .card-body p{
+     font-size:15px;
+     margin-top:0px;
+     text-align:justify;
+     font-family:"Ubuntu";
+     color:#979797;
+ }
+
+.logotype{
+    margin-top:2vmin;
+    background-color:#fefdf5;
+    position:relative;
+    padding-top:4vmin;
+}
+
+.logotype h1:after{
+    content:'';
+    position:absolute;
+    top:6.5vmin;
+    left:-4vmin;
+    right:0;
+    bottom:0;
+    height:70px;
+    width:2px;
+    background-color:#979797;
+
+}
+
+.logotype p{
+  font-family: "Ubuntu";
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.39;
+  letter-spacing: 0.72px;
+  color: #686868;
+  margin-left:12vmin;
+  margin-top:2vmin; 
+}
+
+#type{
+    color:#ee6352;
+    font-weight:bold;
+}
+
+.color-palette{
+    position:relative;
+    margin-top:0;
+}
+
+.color-palette h1::before{
+    content:'';
+    position:absolute;
+    top:0px;
+    left:95%;
+    right:0;
+    bottom:0;
+    height:70px;
+    width:2px;
+    background-color:#979797;
+}
+
+.color-palette p{
+    font-family: "Ubuntu";
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.39;
+    letter-spacing: 0.72px;
+    color: #686868;
+    margin-right:20%;
+    text-align:right;
+  }
+  
+  #color{
+      color:#ee6352;
+      font-weight:bold;
+  }
+
+  .middle{
+      margin:20vh 0;
+      width:60vw;
+      height:70vh;
+  }
+
+  .middle .card{
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      max-width:100%;
+      height:auto;
+      border:none;
+      background-color:#fefdf5;
+  }
+
+ .middle .card-head{
+     position:absolute;
+     top:0;
+     left:0;
+     right:0;
+     bottom:0;
+     max-width:100%;
+     height:30%;
+     background-color:none;
+ }
+
+.middle .angela{
+    position:relative;
+    width:24%;
+    height:100%;
+    display:inline-block;
+    border:none;
+
+}
+
+.angela img{
+    object-fit:contain;
+
+}
+
+.middle .angela>.card-body{
+    position:absolute;
+    top:70%;
+    left:0;
+    right:0;
+    bottom:0;
+    max-width:100%;
+    height:30%;
+    padding:0px;
+}
+
+.angela .card-head{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    max-width:100%;
+    height:70%;
+}
+
+.middle .angela .a{
+    color:#ee6352;
+    text-align:center;
+}
+
+.middle .angela .b{
+    color:#59CD90;
+    text-align:center;
+}
+
+.middle .angela .c{
+    color:#3fa7d6;
+    text-align:center;
+}
+
+.middle .angela .d{
+    color:#f8c05e;
+    text-align:center;
+    font-family:'Ubuntu'
+}
+
+.middle .card-body{
+    position:absolute;
+    top:30%;
+    left:0;
+    right:0;
+    bottom:0;
+    max-width:100%;
+    height:70%;   
+}
+
+.middle .card-body p{
+    font-size:15px;
+    margin:0px;
+    text-align:justify;
+    font-family:"Ubuntu";
+    color:#979797;
+}
+
+.low {
+    position:absolute;
+    top:155vh;
+    margin:20vh 0;
+    width:60vw;
+    height:70vh;
+}
+
+.rectangle-an{
+    position:absolute;
+    top:0;
+    left:1vw;
+    width:100%;
+    height:250px;
+    
+}
+
+.rectangle-si{
+    position: absolute;
+    right:0;
+    bottom:1vh;
+    width:100%;
+    height:50%;
+    
+}
+
+.square{
+    position:absolute;
+    height:90%;
+    left:7%;
+    width:45%;
+    background-color:rgba(248, 192, 94, 0.5);
+}
+
+.circle{
+    position: absolute;
+    top:0;
+    right:-3%;
+    height:90%;
+    width:45%;
+    background-color:rgba(243, 156, 131, 0.5);
+}
+
+.transparent img{
+   object-fit: contain;
+   height:93%;
+   width:93%;
+}
+
+.square .transparent{
+    position: absolute;
+    bottom:0;
+    left:1%; 
+    background-color:transparent;
+}
+
+.circle .transparent{
+    position:absolute;
+    right:1%;
+    bottom:0;
+    width:75%;
+    height:auto;
+    background-color:transparent;
+}
+
+.rectangle-si .text, .rectangle-an .text{
+  font-family: "Ubuntu";
+  font-size: 21px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: 0.7px;
+  color: #686868;
+}
+
+.rectangle-an .text{
+    position:absolute;
+    top:0;
+    left:45%;
+    height:auto;
+    max-width:55%;
+    margin:5% auto;
+}
+
+.rectangle-si .text{
+    position:absolute;
+    top:0;
+    left:12%;
+    height:auto;
+    max-width:55%;
+    margin:5% auto;
+}
+
+.pattern{
+    position:absolute;
+    z-index:1;
+    max-width:10%;
+    height:auto;
+    display:inline-block;
+}
+
+.pattern img{
+   width:75%;
+   height:auto;
+}
+
+.pattern p{
+    font-family:'cooper-black-std';
+    font-weight:200;
+    font-size:8vmin;
+    width:120%;
+    height:auto;
+    position:absolute;
+    color:#686868;
+  
+   
+}
+
+.square .pattern:nth-child(1){
+    left:4%;
+    bottom:15%;
+}
+
+.square .pattern:nth-child(2){
+    left:5%;
+    bottom:75%;
+}
+
+.square .pattern:nth-child(3){
+    left:70%;
+    bottom:30%;
+}
+
+.square .pattern:nth-child(4){
+    left:25%;
+    top:-6%;
+}
+
+.square .pattern:nth-child(5){
+    right:33%;
+    top:30%;
+    transform:rotate(180deg);
+}
+
+.square .pattern:nth-child(6){
+    right:-100%;
+    bottom:40%;
+}
+
+.circle .pattern:nth-child(1){
+    left:75%;
+    top:-14%;
+}
+
+.circle .pattern:nth-child(2){
+    left:14%;
+    top:7%;
+}
+
+.circle .pattern:nth-child(3){
+    left:85%;
+    top:35%;
+}
+
+.circle .pattern:nth-child(4){
+    right:-10%;
+    top:25%;
+}
+
+.circle .pattern:nth-child(5){
+    transform:rotate(180deg) ;
+    top:25%;
+    left:-113%;
+}
+
+.circle .pattern:nth-child(6){
+    left:2%;
+    bottom:2%;
+}
+
+
+
+
+
+
+
+
+ 

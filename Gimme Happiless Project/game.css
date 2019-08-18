@@ -1,0 +1,198 @@
+
+body{
+    background:#fefdf5;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-custom{
+    background-color:#fefdf5 !important;
+    padding-bottom:0px;
+ 
+}
+
+a{
+    margin-top:18px;
+    margin-left:8vmin; 
+}
+
+ul{
+    font-family:"Ubuntu";
+    letter-spacing: 2px;
+    font-weight:700;
+    font-size:26px;
+    margin-right:8vmin;
+    padding-bottom:2px;
+}
+
+li{
+    margin-left:25px;
+}
+
+.branding{
+    color:#ee6352 !important;
+}
+
+.branding:hover{
+    border-bottom: 2px solid #ee6352;
+  
+}
+
+.product{
+    color:#3fa7d6 !important;
+}
+
+.product:hover{
+    border-bottom: 2px solid #3fa7d6;
+}
+
+.message{
+    color:#f8c05e !important;
+}
+
+.message:hover{
+    border-bottom: 2px solid #f8c05e;
+}
+
+.logo{
+    width:100%;
+    height:auto;
+}
+
+#button:hover{
+    color:#686868;
+    background:#f8c05e;
+    box-shadow: inset 0 10px 10px 0 rgba(114, 108, 108, 0.5);
+
+}
+
+#button{
+    margin-top:20vmin;
+    font-family:"cooper-black-std", serif;
+    color:#686868;
+    font-size:3.5vmin;
+    border-radius:6vmin;
+    width:28vmin;
+    height:8vmin;
+    object-fit: contain;
+    box-shadow: 0 7px 6px 0 rgba(114, 108, 108, 0.5);
+    border: solid 6px #f8c05e;
+    background-image: linear-gradient(0deg,#f5f2f2, white 70%);
+}
+
+img{
+    width:100%;
+}
+
+.question{
+    font-family:"Ubuntu",serif;
+    font-size: 6vmin;
+    color:#686868;
+    font-weight:500;
+    position:absolute;
+    top:10vh;
+    left:-2vw;
+    width:80vw;
+    text-align: center;
+    
+}
+
+.coffee{
+    text-align: center;
+    margin:0;
+    height:20vh;
+    padding:0;
+    position: relative;
+}
+
+.button1{
+    display:flex;
+    justify-content:flex-end;
+}
+
+.bar{
+    position:relative;
+}
+
+.spin{
+    position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+    left:84%;
+    width:10%;
+    height:90%;
+    z-index:1;
+    
+}
+.spin img{
+	position:absolute;
+	object-fit: contain;
+}
+
+.spin img:nth-child(1){
+    width:100%;
+    height:auto;
+    padding:0;
+    position:absolute;
+    top:1%;
+	right:0;
+	bottom:0;
+    left:5%;
+ }
+ 
+.spin img:nth-child(2){
+    width:100%;
+    height:auto;
+    padding:0;
+    position:absolute;
+    top:1%;
+	right:0;
+	bottom:0;
+    left:5%;
+ }
+ 
+.spin img:nth-child(3){
+   width:90%;
+   height:auto;
+   margin:0 0.3vw;
+   animation-name: spin;
+   animation-duration:1.2s;
+   animation-iteration-count:2;
+   animation-timing-function: linear; 
+}
+
+.spin img:nth-child(4){
+    width:45%;
+    height:auto;
+    margin:15% 30%;
+    animation-name:big;
+   animation-duration:2s;
+   animation-iteration-count:1;
+   animation-timing-function: linear; 
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+        opacity:0.5;
+    }
+    to {
+        transform:rotate(360deg);
+        opacity:1;
+    }
+}
+
+@keyframes big{
+    0%{
+        transform:scale(0.8, 0.8);
+        opacity:0;
+    }
+    50%{
+        transform:scale(1.1, 1.1);
+    }
+    100%{
+        transform:scale(1,1);
+    }
+}

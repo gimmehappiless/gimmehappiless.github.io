@@ -1,0 +1,295 @@
+body{
+    background:#fefdf5;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.navbar-custom{
+    background-color:#fefdf5 !important; 
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:99;
+}
+
+a{
+    margin-top:18px;
+    margin-left:8vmin;
+}
+
+ul{
+    font-family:"Ubuntu";
+    letter-spacing: 2px;
+    font-weight:700;
+    font-size:26px;
+    margin-right:2vmin;
+    
+    
+}
+
+li{
+    margin-left:25px;
+    
+}
+
+.branding{
+    color:#ee6352 !important;
+}
+
+.branding:hover{
+    border-bottom: 2px solid #ee6352;
+  
+}
+
+.product{
+    color:#3fa7d6 !important;
+}
+
+.product:hover{
+    border-bottom: 2px solid #3fa7d6;
+}
+
+.message{
+    color:#f8c05e !important;
+}
+
+.message:hover{
+    border-bottom: 2px solid #f8c05e;
+}
+
+.logo{
+    width:100%;
+    height:auto;
+}
+
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width:0; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top:0;
+    left:0;
+    background-color:#fefdf5; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 40vh;
+    transition:0.5s;
+  }
+
+  .sidenav a {
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0;
+    margin-right:0;
+    padding-top:10px;
+    transition:0.3s;
+    text-transform:uppercase;
+    color:#686868;
+    font-family: 'Ubuntu';
+    font-weight:bold;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.72px;
+    text-align: center;
+    font-size:26px;
+    text-decoration:none;
+    
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+h3::before{
+content:'';
+position:absolute;
+top:0;
+right:0;
+bottom:0;
+left:0px;
+background-color:#979797;
+display:none;
+}
+
+h3:hover::before{
+  content:'';
+  position:absolute;
+  top:94%;
+  right:0;
+  bottom:0;
+  left:23%;
+  height:2px;
+  width:50%;
+  background-color:#979797;
+  display:flex;
+}
+
+
+.container{
+    position:absolute;
+    top:30%;
+    right:0;
+    bottom:0;
+    left:0;
+}
+
+.col-md-3{
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    
+}
+
+.col-md-9{
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:30%;
+    max-width:70%;
+    height:85%;
+    
+}
+
+.col-md-9 p{
+    text-align:justify;
+    font-family: 'Ubuntu';
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.45;
+    letter-spacing: 0.56px;
+    text-align: justify;
+    color: #686868;
+    z-index: 99;
+}
+
+.col-md-9 p:nth-child(1){
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    max-width:100%;
+    height:10%;
+    font-size: 21px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1.43;
+}
+
+.col-md-9 p:nth-child(2){
+    position:absolute;
+    top:10%;
+    right:0;
+    bottom:0;
+    left:0;
+    max-width:100%;
+    height:25%;
+}
+
+.col-md-9 p:nth-child(3){
+    position:absolute;
+    top:33%;
+    right:0;
+    bottom:0;
+    left:0;
+    max-width:100%;
+    height:25%;
+}
+
+.col-md-9 p:nth-child(4){
+    position:absolute;
+    top:60%;
+    right:0;
+    bottom:0;
+    left:0;
+    max-width:100%;
+    height:25%;
+}
+
+.col-md-9 p:nth-child(5){
+    position:absolute;
+    top:85%;
+    right:0;
+    bottom:0;
+    left:0;
+    max-width:100%;
+    height:10%;
+    font-size: 21px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1.43;
+}
+
+.pattern:nth-child(1){
+    position:absolute;
+    top:95%;
+    right:0;
+    bottom:0;
+    left:65%;
+    max-width:5%;
+    height:5%;
+    display:inline-block;
+    z-index:1;
+}
+
+.pattern:nth-child(2){
+    position:absolute;
+    top:-1%;
+    right:0;
+    bottom:0;
+    left:-2%;
+    max-width:5%;
+    height:5%;
+    display:inline-block;
+    z-index:1;
+}
+
+.pattern:nth-child(3){
+    position:absolute;
+    top:20%;
+    right:0;
+    bottom:0;
+    left:95%;
+    max-width:5%;
+    height:5%;
+    display:inline-block;
+    z-index:1;
+}
+
+.pattern img{
+    object-fit: contain;
+    height:99%;
+    width:99%;
+    opacity:0.57;
+}
+
+.switch{
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    width:10vw;
+    height:10vh;
+    background-color:red;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+
+  }
+

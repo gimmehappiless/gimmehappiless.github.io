@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Game Result</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/kru0avj.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="result.css">
+    
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-custom" id="main">
+        
+        <a class="navbar-brand" href="home.html" style="width: 200px"><img class="logo" src="Logo2.png" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="nav navbar-nav ml-auto">    
+                <li><a class="nav-item nav-link branding" href="branding_brand.html">Branding <span class="sr-only">(current)</span></a> </li>
+                <li><a class="nav-item nav-link product" href="general.html">Product</a></li>
+                <li><a class="nav-item nav-link message" href="#">Message</a></li>
+            </ul>
+        </div>
+        
+    </nav>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-7">
+                <img src="result/ignore.jpg" alt="game result_ignore" id="pic">
+            </div>
+        </div>
+        <div class="row text-center justify-content-center">
+            <div class="col-8">
+                <h1 class="answer" id="anstext">You HAVE to be happy.</h1>
+            </div>
+        </div>
+        <div class="row flex">
+            <div class="col-6 button1">
+                <button type="button"class="btn btn-outline-warning btn-lg" id="button" style="margin-right:3vmin;" >Save me!</button>
+            </div>
+            <div class="col-6 button2">
+                    <a href="secret.html"><button type="button"class="btn btn-outline-warning btn-lg" id="button" style="margin-left:3vmin;">Happy, huh?</button></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- popup window-->
+
+    <div class="bg-modal">
+
+        <div class="modal-content">
+            <div class="close">+</div>
+            <div onclick = 'direct_to();'>
+                <img src="product/4-1.jpg" alt="memo" style = "border: solid 2px #d3d3d3;" id="prod">
+                <div class="hr-sect">Just Be Happy</div>
+                <p class="pro-intro">Don't-worry-be-happy <br>
+                    Suit</p>
+            </div>
+        </div>
+
+    </div>    
+    
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script>
+        var url_parsed = window.location.href.split("?");
+        var information;
+        switch (url_parsed[1]) {
+            case "ignore":
+                document.getElementById('pic').src='result/ignore.jpg';
+                document.getElementById("anstext").innerHTML = " You HAVE to be happy!";
+                document.getElementById('prod').src='product/4-1.jpg';
+                document.querySelector('.hr-sect').innerHTML = "Just Be happy";
+                document.querySelector('.pro-intro').innerHTML = "Don't-worry-be-happy<br>Suit";
+                information = "happy.html";
+                
+                break;
+            case "sexy":
+                document.getElementById('pic').src='result/sexy.jpg';
+                document.getElementById("anstext").innerHTML = "You are not sexy enough.";
+                document.getElementById('prod').src='product/2-2.jpg';
+                document.querySelector('.hr-sect').innerHTML = "sexy cutie pie";
+                document.querySelector('.pro-intro').innerHTML = "hot-hot-body<br>Suit";
+                information = "sexy.html";
+                
+                break;
+            case "success":
+                document.getElementById('pic').src='result/success.jpg';
+                document.getElementById("anstext").innerHTML = "You are not successful enough.";
+                document.getElementById('prod').src='product/1-3.jpg';
+                document.querySelector('.hr-sect').innerHTML = "Fame & Famous";
+                document.querySelector('.pro-intro').innerHTML = "Pretend-to-be-success<br>Headgear";
+                information = "general.html";
+               
+                break;
+            case "like":
+                document.getElementById('pic').src='result/like.jpg';
+                document.getElementById("anstext").innerHTML = "You don't have enough likes from others."
+                document.getElementById('prod').src='product/3-1.jpg';
+                document.querySelector('.hr-sect').innerHTML = "Glamourous Pop Star";
+                document.querySelector('.pro-intro').innerHTML = "Look-like-a-pop-star<br>Magnet";
+                information = "star.html";
+               
+                break;
+        }
+
+        
+
+        document.getElementById('button').addEventListener("click", function() {
+	    document.querySelector('.bg-modal').style.display = "flex";
+        });
+
+        document.querySelector('.close').addEventListener("click", function() {
+        document.querySelector('.bg-modal').style.display = "none";
+        });
+
+        function direct_to(){
+            window.location.href = information;
+        }
+    </script>
+</body>
+</html>

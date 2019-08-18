@@ -1,0 +1,245 @@
+
+body{
+    background:#fefdf5;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.navbar-custom{
+    background-color:#fefdf5 !important;    
+}
+
+a{
+    margin-top:18px;
+    margin-left:8vmin;
+}
+
+ul{
+    font-family:"Ubuntu";
+    letter-spacing: 2px;
+    font-weight:700;
+    font-size:26px;
+    margin-right:8vmin;
+}
+
+li{
+    margin-left:25px;
+    /* margin-right:15px; */
+}
+
+.branding{
+    color:#ee6352 !important;
+}
+
+.branding:hover{
+    border-bottom: 2px solid #ee6352;
+  
+}
+
+.product{
+    color:#3fa7d6 !important;
+}
+
+.product:hover{
+    border-bottom: 2px solid #3fa7d6;
+}
+
+.message{
+    color:#f8c05e !important;
+}
+
+.message:hover{
+    border-bottom: 2px solid #f8c05e;
+}
+
+/* @font-face {
+    font-family: abc;
+    src: url("/CooperLtBTBold.ttf") format("truetype");
+    
+}
+
+h1 { 
+    font-family: abc, serif;
+    font-size: 11vmin;
+    text-align:left;
+    color:#ee6352;
+    margin-left:4vmin;
+    font-weight:bold;
+} */
+
+h1{
+    font-family:'cooper-black-std',serif;
+    font-size:85px;
+    text-align:left;
+    color:#ee6352;
+    
+}
+
+.logo{
+    width:100%;
+    height:auto;
+}
+
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width:0; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top:0;
+    left:0;
+    background-color:#fefdf5; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 40vh;
+    transition:0.5s;
+  }
+
+  .sidenav a {
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0;
+    margin-right:0;
+    padding-top:10px;
+    transition:0.3s;
+    text-transform:uppercase;
+    color:#686868;
+    font-family: 'Ubuntu';
+    font-weight:bold;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.72px;
+    text-align: center;
+    font-size:26px;
+    text-decoration:none;
+    
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+    #content {margin-left:10px;}
+
+  }
+
+  .other::before{
+      content:'';
+      position:absolute;
+      height:2px;
+      width:180px;
+      background-color:#979797;
+      display:none;
+  }
+
+  .other:hover{
+    /* content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    height:2px;
+    width:180px;
+    background-color:#979797;
+    display:flex; */
+    border-bottom:solid 2px #686868;
+}
+
+  .glamorous::after{
+    content:'';
+    position:absolute;
+    height:2px;
+    width:100px;
+    background-color:#979797;
+    display:none;
+  }
+
+  .glamorous:hover{
+    /* content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    height:2px;
+    width:100px;
+    background-color:#979797;
+    display:flex; */
+    border-bottom:solid 2px #686868;
+  }
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  #content {
+    position:absolute;
+    transition: margin-left .5s;
+    /* margin-left:10vw;
+    margin-top:10vh; */
+    top:30vh;
+    left:20vw;
+    padding:0;
+    display:flex;
+    flex-direction: initial;
+    justify-content: space-between;
+    width:65vw;
+    height:auto;
+  }
+  
+ .card{
+     display:flex;
+     flex-direction:column;
+     margin:10px;
+     box-sizing:border-box;
+     height:17vmax;
+     width:20vmax;
+     box-shadow: 0px 3px 16px 0 rgba(114, 108, 108, 0.25);
+     border-radius:16px;
+ }
+
+ .card img{
+     object-fit:cover;
+     width: 100%;
+     height: 100%;
+     border-radius:16px 16px 0 0 ;
+ }
+
+ h4{
+    font-family:"Ubuntu";
+    font-size: 15px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.44px;
+    text-align: center;
+    color: #686868;
+   
+ }
+
+ .card-body{
+    background-color:white;
+    box-shadow: 0px 3px 16px 0 rgba(114, 108, 108, 0.25);
+    border-radius:0 0 16px 16px;
+ }
+
+ .switch{
+     position:absolute;
+     top:0;
+     right:0;
+     bottom:0;
+     left:0;
+     width:10vw;
+     height:10vh;
+     background-color:red;
+ }
+
+ 
