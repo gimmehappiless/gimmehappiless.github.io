@@ -196,5 +196,31 @@ h1{
     left:10px; 
 }
 
+.whatsup{
+    position:fixed;
+    top:43vh;
+    right:0;
+    width: 37px;
+    height: 160px;
+    border-radius: 8px 0 0 8px;
+    box-shadow: 0 2px 5px 0 rgba(142, 141, 141, 0.5);
+    background-color: #ffffff;
+}
 
+.whatsup a{
+    margin:30px auto;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    text-decoration:none;
+    transform: rotate(-180deg);
+    font-family: "Ubuntu";
+    font-size: 20px;
+    font-weight: normal;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.56px;
+    text-align: center;
+    color: #686868;
+}
 
