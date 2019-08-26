@@ -9,12 +9,15 @@ body{
 
 
 .navbar-custom{
-    background-color:#fefdf5 !important;    
+    background-color:#fefdf5 !important;  
+    margin-top:5vh;  
+    padding-right:0;
 }
 
 a{
     margin-top:18px;
-    margin-left:8vmin;
+    margin-left:4vw;
+    
 }
 
 #below{
@@ -81,13 +84,19 @@ h1 {
     font-weight:bold;
 } */
 
+#below{
+    margin:5%;
+}
+
 h1{
     font-family:'cooper-black-std',serif;
     font-size:85px;
     text-align:left;
     color:#ee6352;
-    
+    padding-top:5vh;
 }
+
+
 
 #button:hover{
     color:#686868;
@@ -97,10 +106,11 @@ h1{
 }
 
 #button{
-  
+    position:relative;
+    margin:30px;
     font-family:'cooper-black-std';
     color:#686868;
-    font-size:4vmin;
+    font-size:3.5vmin;
     letter-spacing: 1.4;
     border-radius:6vmin;
     width: 35vmin;
@@ -112,8 +122,79 @@ h1{
 }
 
 .logo{
+    position:relative;
     width:100%;
+    height:auto;  
+}
+
+.logo:hover .tinypattern {
+    -webkit-animation: rotation 0.5s 1 linear;
+}
+
+@-webkit-keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}
+
+.tinypattern, .gimmehappiless{
+    display:inline-block;
+}
+
+
+
+.tinypattern img{
+    width:15px;
     height:auto;
 }
+
+.tinypattern:nth-child(1){
+    position:absolute;
+    top:-45px;
+    left:15px;
+}
+
+.tinypattern:nth-child(2){
+    position:absolute;
+    top:50px;
+    left:160px;
+}
+
+.tinypattern:nth-child(3){
+    position:absolute;
+    top:-25px;
+    left:180px;
+}
+
+.tinypattern:nth-child(4){
+    position:absolute;
+    top:60px;
+    left:55px;
+}
+
+.tinypattern:nth-child(5){
+    position:absolute;
+    top:-60px;
+    left:100px;
+}
+
+.tinypattern:nth-child(6){
+    position:absolute;
+    top:0px;
+    left:-30px;
+}
+
+
+.logoword{
+    position:absolute;
+    width:150px;
+    height:auto;
+    top:-20px;
+    left:10px; 
+}
+
 
 
