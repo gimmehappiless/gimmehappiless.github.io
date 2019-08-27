@@ -18,7 +18,17 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-custom" id="main">
         
-        <a class="navbar-brand" href="index.html" style="width: 200"><img class="logo" src="Logo2.png" alt="logo"></a>
+        <a class="navbar-brand" href="index.html" style="width: 200">
+            <div class="logo">
+                <div class="tinypattern"><img src="c/2.png" alt="tiny pattern"></div>
+                <div class="tinypattern"><img src="c/2.png" alt="tiny pattern"></div>
+                <div class="tinypattern"><img src="t/2.png" alt="tiny pattern"></div>
+                <div class="tinypattern"><img src="t/2.png" alt="tiny pattern"></div>
+                <div class="tinypattern"><img src="x/2.png" alt="tiny pattern"></div>
+                <div class="tinypattern"><img src="s/2.png" alt="tiny pattern"></div>
+                <div class="gimmehappiless"><img class="logoword" src="logoword/2.png" alt="tiny pattern"></div>
+        </div>
+        </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
             </button>
@@ -33,15 +43,15 @@
 
   
     <div class="inner">
-        <div id="mysidenav" class="sidenav d-none d-md-block d-print-block">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div id="mysidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" id="close" onclick="closeNav()">&times;</a>
             <a class="nav-link" href="branding_brand.html">Our Brand</a>
             <a class="nav-link" href="goal.html">Our Goal</a>
         </div>
     </div>
 
     <!-- Use any element to open the sidenav -->
-    <span class="switch d-inline-block d-md-none" onclick="openNav()">open</span>
+    <span class="switch" onclick="openNav()">open</span>
 
     <div class="content">    
         <div class="row top d-flex">
@@ -179,16 +189,31 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     
     <script>
-        /* Set the width of the side navigation to 250px */
-        function openNav() {
-        document.getElementById("mysidenav").style.width = "330px";
-        }
+            /* Set the width of the side navigation to 250px */
+            function openNav() {
+            document.getElementById("mysidenav").style.width = "300px";
+            document.getElementById("close").style.display = "inline";
+            }
+    
+            /* Set the width of the side navigation to 0 */
+            function closeNav() {
+            document.getElementById("mysidenav").style.width = "0";
+            document.getElementById("close").style.display = "none";
+            }
+    
+            function resize() {
+                if ( $(window).width() < 990) {     
+                    document.getElementById("mysidenav").style.width = "0";
+                }
+                else {
+                    document.getElementById("mysidenav").style.width = "300px";
+                    document.getElementById("close").style.display = "none";
+                    document.getElementById("close").style.display = "none";
 
-        /* Set the width of the side navigation to 0 */
-        function closeNav() {
-        document.getElementById("mysidenav").style.width = "0";
-        }
-    </script>
-
+                }
+            }
+            $(window).on("resize", resize);
+            resize(); // call once initially
+        </script>
     </body>
 </html>
