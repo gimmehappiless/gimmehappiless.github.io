@@ -18,7 +18,17 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-custom" id="main">
         
-        <a class="navbar-brand" href="home.html" style="width: 200"><img class="logo" src="Logo2.png" alt="logo"></a>
+        <a class="navbar-brand" href="home.html" style="width: 200">
+            <div class="logo">
+                <div class="tinypattern"><img src="c/2.png" alt="tiny pattern"></div>
+                <div class="tinypattern"><img src="c/2.png" alt="tiny pattern"></div>
+                <div class="tinypattern"><img src="t/2.png" alt="tiny pattern"></div>
+                <div class="tinypattern"><img src="t/2.png" alt="tiny pattern"></div>
+                <div class="tinypattern"><img src="x/2.png" alt="tiny pattern"></div>
+                <div class="tinypattern"><img src="s/2.png" alt="tiny pattern"></div>
+                <div class="gimmehappiless"><img class="logoword" src="logoword/2.png" alt="tiny pattern"></div>
+            </div>
+        </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
             </button>
@@ -31,39 +41,38 @@
         </div>
         
     </nav>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 d-none d-md-block d-print-block">
-                <div id="mysidenav" class="sidenav">
-                    <a href="javascript:void(0)" class="closebtn d-inline d-md-none " onClick="closeNav()">&times;</a>
-                    <a href="general.html" class="other">Fame & Famous</a>
-                    <a href="sexy.html" class="other">Sexy Cutie Pie</a>
-                    <a href="star.html" class="glamorous">Glamorous <br>Pop Star</a>
-                    <a href="happy.html" class="other">Just Be Happy</a>
+
+    <div id="mysidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" id="close" onclick="closeNav()">&times;</a>
+        <a href="general.html" class="other">Fame & Famous</a>
+        <a href="sexy.html" class="other">Sexy Cutie Pie</a>
+        <a href="star.html" class="glamorous">Glamorous <br>Pop Star</a>
+        <a href="happy.html" class="other">Just Be Happy</a>
+    </div>
+
+    <!-- Use any element to open the sidenav -->
+    <span class="switch" id="switch" onclick="openNav()">open</span>
+
+
+    <div id="content">
+        <div class="row flex">
+            <div class="toy col-4 order-1">
+                <div class="card" onclick = 'window.location.href = "product.html?3-1";'>
+                    <img class="card-img-top" src="product/3-1.jpg" alt="Card image cap">
+                    <div class="card-body">
+                    <h4 class="card-text">Looks-like-a-pop-<br>star Magnet</h4>
                 </div>
             </div>
-
-            <!-- Use any element to open the sidenav -->
-            <span class="switch d-inline-block d-md-none" onClick="openNav()">open</span>
-
-            <div id="content">
-                <div class="col-md-3">
-                    <div class="card" onclick = 'window.location.href = "product.html?3-1";'>
-                        <img class="card-img-top" src="product/3-1.jpg" alt="Card image cap">
-                        <div class="card-body">
-                        <h4 class="card-text">Looks-like-a-pop-<br>star Magnet</h4>
-                        </div>
+            <div class="toy col-4 order-2">
+                <div class="card" onclick = 'window.location.href = "product.html?3-2";' >
+                    <img class="card-img-top" src="product/3-2.jpg" alt="Card image cap">
+                    <div class="card-body">
+                    <h4 class="card-text">Face & Body Customized<br> Blow Up Doll</h4>
                     </div>
                 </div>
-
-                <div class="col-md-3">
-                    <div class="card" onclick = 'window.location.href = "product.html?3-2";' >
-                        <img class="card-img-top" src="product/3-2.jpg" alt="Card image cap">
-                        <div class="card-body">
-                        <h4 class="card-text">Face & Body Customized<br> Blow Up Doll</h4>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <div class="whatsup">
+                <a href="#">What's up</a>
             </div>
         </div>
     </div>
@@ -72,15 +81,39 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
-        /* Set the width of the side navigation to 250px */
+         /* Set the width of the side navigation to 250px */
         function openNav() {
-        document.getElementById("mysidenav").style.width = "350px";
+            document.getElementById("mysidenav").style.width = "300px";
+            document.getElementById("close").style.display = "inline";
         }
-
-        /* Set the width of the side navigation to 0 */
+    
+            /* Set the width of the side navigation to 0 */
         function closeNav() {
-        document.getElementById("mysidenav").style.width = "0";
+            document.getElementById("mysidenav").style.width = "0";
+            document.getElementById("close").style.display = "none";
         }
+    
+        function resize() {
+            if ( $(window).width() < 990) {     
+                // small window
+                document.getElementById("mysidenav").style.width = "0";     // fold side nav    
+                document.getElementById("switch").style.display = "block";  // make switch appear
+                document.getElementById("close").style.display = "inline";  // make close appear
+                // sequence: sidenav -> switch -> logo    
+                document.getElementById("mysidenav").style.zIndex = "4";    
+            }
+            else {
+                // large window
+                document.getElementById("mysidenav").style.width = "300px"; // unfold side nav
+                document.getElementById("switch").style.display = "none";   // make switch disappear
+                document.getElementById("close").style.display = "none";    // make close disappear
+                // sequence: logo -> sidenav -> switch
+                document.getElementById("mysidenav").style.zIndex = "1";
+            }
+        }
+        $(window).on("resize", resize);
+        resize(); // call once initially
+   
     </script>
 </body>
 </html>

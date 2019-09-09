@@ -9,13 +9,14 @@ body{
 
 .navbar-custom{
     background-color:#fefdf5 !important;    
+    margin-top:5vh;  
+    padding-right:0;
 }
 
 a{
     margin-top:18px;
-    margin-left:8vmin;
+    margin-left:4vw;   
 }
-
 ul{
     font-family:"Ubuntu";
     letter-spacing: 2px;
@@ -54,21 +55,6 @@ li{
     border-bottom: 2px solid #f8c05e;
 }
 
-/* @font-face {
-    font-family: abc;
-    src: url("/CooperLtBTBold.ttf") format("truetype");
-    
-}
-
-h1 { 
-    font-family: abc, serif;
-    font-size: 11vmin;
-    text-align:left;
-    color:#ee6352;
-    margin-left:4vmin;
-    font-weight:bold;
-} */
-
 h1{
     font-family:'cooper-black-std',serif;
     font-size:85px;
@@ -76,8 +62,6 @@ h1{
     color:#ee6352;
     
 }
-
-
 
 #button:hover{
     color:#686868;
@@ -101,96 +85,119 @@ h1{
 }
 
 .logo{
+    position:relative;
     width:100%;
+    height:auto;  
+    z-index:3;
+}
+
+.logo:hover .tinypattern {
+    -webkit-animation: rotation 0.5s 1 linear;
+}
+
+@-webkit-keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}
+
+.tinypattern, .gimmehappiless{
+    display:inline-block;
+}
+
+.tinypattern img{
+    width:15px;
     height:auto;
 }
 
+.tinypattern:nth-child(1){
+    position:absolute;
+    top:-45px;
+    left:15px;
+}
+
+.tinypattern:nth-child(2){
+    position:absolute;
+    top:50px;
+    left:160px;
+}
+
+.tinypattern:nth-child(3){
+    position:absolute;
+    top:-25px;
+    left:180px;
+}
+
+.tinypattern:nth-child(4){
+    position:absolute;
+    top:60px;
+    left:55px;
+}
+
+.tinypattern:nth-child(5){
+    position:absolute;
+    top:-60px;
+    left:100px;
+}
+
+.tinypattern:nth-child(6){
+    position:absolute;
+    top:0px;
+    left:-30px;
+}
+
+.logoword{
+    position:absolute;
+    width:150px;
+    height:auto;
+    top:-20px;
+    left:10px; 
+}
+
+
 .sidenav {
-    height: 70%; /* Full-height: remove this if you want "auto" height */
-    width: 40vmin; /* Set the width of the sidebar */
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width:300px; /* Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 30%;
-    left: 5vmin;
+    z-index:1; /* Stay on top */
+    top:0;
+    left:0;
     background-color:#fefdf5; /* Black */
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
-    
+    padding-top: 40vh;
+    transition:0.5s;
   }
 
   .sidenav a {
-    display: block;
-    padding-top: 20px;
-    width:40vmin;
     position:relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0;
+    margin-right:0;
+    padding-top:10px;
+    transition:0.3s;
     text-transform:uppercase;
-    color: #686868;
-    font-family: Ubuntu;
+    color:#686868;
+    font-family: 'Ubuntu';
+    font-weight:bold;
     font-style: italic;
     font-stretch: normal;
     line-height: normal;
     letter-spacing: 0.72px;
     text-align: center;
-    margin-left:10px;
-    margin-bottom:2px;
+    font-size:26px;
     text-decoration:none;
-    font-size:18px;
+    
   }
 
-  
-  
-  .other::before{
-      content:'';
-      position:absolute;
-      top:30px;
-      right:0;
-      bottom:0;
-      left:20px;
-      height:2px;
-      width:180px;
-      background-color:#979797;
-      display:none;
+  .sidenav a:hover{
+      border-bottom:solid 2px #686868;
   }
 
-  .other:hover::before{
-    content:'';
-    position:absolute;
-    top:55px;
-    right:0;
-    bottom:0;
-    left:45px;
-    height:2px;
-    width:180px;
-    background-color:#979797;
-    display:flex;
-}
-
-  .glamorous::after{
-    content:'';
-    position:absolute;
-    top:90px;
-    right:0;
-    bottom:0;
-    left:58px;
-    height:2px;
-    width:100px;
-    background-color:#979797;
-    display:none;
-  }
-
-  .glamorous:hover::after{
-    content:'';
-    position:absolute;
-    top:90px;
-    right:0;
-    bottom:0;
-    left:83px;
-    height:2px;
-    width:100px;
-    background-color:#979797;
-    display:flex;
-  }
-  
  .row{
      display:flex;
      height:60%;
@@ -363,4 +370,32 @@ p{
     right:0;
     bottom:0;
     left:50%;
+}
+
+.whatsup{
+    position:fixed;
+    top:43vh;
+    right:0;
+    width: 37px;
+    height: 160px;
+    border-radius: 8px 0 0 8px;
+    box-shadow: 0 2px 5px 0 rgba(142, 141, 141, 0.5);
+    background-color: #ffffff;
+}
+
+.whatsup a{
+    margin:30px auto;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    text-decoration:none;
+    transform: rotate(-180deg);
+    font-family: "Ubuntu";
+    font-size: 20px;
+    font-weight: normal;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.56px;
+    text-align: center;
+    color: #686868;
 }

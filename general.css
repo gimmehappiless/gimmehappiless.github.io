@@ -8,9 +8,12 @@ body{
 
 
 .navbar-custom{
-    background-color:#fefdf5 !important;   
+    background-color:#fefdf5 !important; 
+    position:fixed;
     margin-top:5vh;  
     padding-right:0; 
+    width:100%;
+    z-index:2;
 }
 
 a{
@@ -28,7 +31,6 @@ ul{
 
 li{
     margin-left:25px;
-    /* margin-right:15px; */
 }
 
 .branding{
@@ -71,13 +73,12 @@ h1 {
     font-weight:bold;
 } */
 
-h1{
+/* h1{
     font-family:'cooper-black-std',serif;
     font-size:85px;
     text-align:left;
     color:#ee6352;
-    
-}
+} */
 
 .logo{
     position:relative;
@@ -194,6 +195,7 @@ h1{
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 40vh;
     transition:0.5s;
+    z-index: 1;
   }
 
   .sidenav a {
@@ -278,6 +280,7 @@ h1{
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+    display: none;
   }
 
   #content {
@@ -350,6 +353,8 @@ h1{
     height:80px;
     border-radius: 0 16px 16px 0;
     box-shadow: 0 2px 7px 0 rgba(190, 190, 190, 0.49);
+    display: none;
+    z-index: 3;
 }
 
 

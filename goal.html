@@ -18,7 +18,17 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-custom" id="main">
         
-        <a class="navbar-brand" href="index.html" style="width: 200"><img class="logo" src="Logo2.png" alt="logo"></a>
+        <a class="navbar-brand" href="index.html" style="width: 200">
+            <div class="logo">
+                <div class="tinypattern"><img src="c/2.png" alt="tiny pattern"></div>
+                <div class="tinypattern"><img src="c/2.png" alt="tiny pattern"></div>
+                <div class="tinypattern"><img src="t/2.png" alt="tiny pattern"></div>
+                <div class="tinypattern"><img src="t/2.png" alt="tiny pattern"></div>
+                <div class="tinypattern"><img src="x/2.png" alt="tiny pattern"></div>
+                <div class="tinypattern"><img src="s/2.png" alt="tiny pattern"></div>
+                <div class="gimmehappiless"><img class="logoword" src="logoword/2.png" alt="tiny pattern"></div>
+            </div>
+        </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
             </button>
@@ -67,7 +77,9 @@
                     <p> Choose us and so long, those crying nights in bed!!!</p>
                 </div>
             </div>
-
+            <div class="whatsup">
+                <a href="#">What's up</a>
+            </div>
         </div>
     </div>
 
@@ -78,13 +90,27 @@
     <script>
         /* Set the width of the side navigation to 250px */
         function openNav() {
-        document.getElementById("mysidenav").style.width = "380px";
+        document.getElementById("mysidenav").style.width = "300px";
+        document.getElementById("close").style.display = "inline";
         }
 
         /* Set the width of the side navigation to 0 */
         function closeNav() {
         document.getElementById("mysidenav").style.width = "0";
+        document.getElementById("close").style.display = "none";
         }
+
+        function resize() {
+            if ( $(window).width() < 990) {     
+                document.getElementById("mysidenav").style.width = "0";
+            }
+            else {
+                document.getElementById("mysidenav").style.width = "300px";
+                document.getElementById("close").style.display = "none";
+            }
+        }
+        $(window).on("resize", resize);
+        resize(); // call once initially
     </script>
 
 

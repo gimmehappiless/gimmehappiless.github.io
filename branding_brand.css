@@ -81,6 +81,7 @@ h1 {
     position:relative;
     width:100%;
     height:auto;
+    z-index: 2;
 }
 
 .logo:hover .tinypattern {
@@ -191,9 +192,10 @@ h1 {
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 40vh;
     transition:0.5s;
-  }
+    z-index: 1;
+}
 
-  .sidenav a {
+.sidenav a {
     position:relative;
     display:flex;
     flex-direction: column;
@@ -213,13 +215,13 @@ h1 {
     text-align: center;
     font-size:26px;
     text-decoration:none;
-    
-  }
+
+}
 
 
-  .sidenav a:hover{
+.sidenav a:hover{
     border-bottom:solid 2px #686868;
-  }
+}
 
 .sidenav .closebtn {
     position: absolute;
@@ -227,7 +229,8 @@ h1 {
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-  }
+    display: none;
+}
 
 .content{
     position:absolute;
@@ -661,7 +664,8 @@ h1 {
     height:80px;
     border-radius: 0 16px 16px 0;
     box-shadow: 0 2px 7px 0 rgba(190, 190, 190, 0.49);
-    z-index:3;
+    display: none;
+    z-index: 3;
 }
 
 

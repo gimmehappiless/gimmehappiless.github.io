@@ -51,7 +51,7 @@
     </div>
    
     <!-- Use any element to open the sidenav -->
-    <span class="switch" onclick="openNav()">open</span>
+    <span class="switch" id="switch" onclick="openNav()">open</span>
 
     <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
     <div id="content"> 
@@ -95,23 +95,32 @@
     <script>
         /* Set the width of the side navigation to 250px */
         function openNav() {
-        document.getElementById("mysidenav").style.width = "300px";
-        document.getElementById("close").style.display = "inline";
+            document.getElementById("mysidenav").style.width = "300px";
+            document.getElementById("close").style.display = "inline";
         }
-
-        /* Set the width of the side navigation to 0 */
+    
+            /* Set the width of the side navigation to 0 */
         function closeNav() {
-        document.getElementById("mysidenav").style.width = "0";
-        document.getElementById("close").style.display = "none";
+            document.getElementById("mysidenav").style.width = "0";
+            document.getElementById("close").style.display = "none";
         }
-
+    
         function resize() {
             if ( $(window).width() < 990) {     
-                document.getElementById("mysidenav").style.width = "0";
+                // small window
+                document.getElementById("mysidenav").style.width = "0";     // fold side nav    
+                document.getElementById("switch").style.display = "block";  // make switch appear
+                document.getElementById("close").style.display = "inline";  // make close appear
+                // sequence: sidenav -> switch -> logo    
+                document.getElementById("mysidenav").style.zIndex = "4";    
             }
             else {
-                document.getElementById("mysidenav").style.width = "300px";
-                document.getElementById("close").style.display = "none";
+                // large window
+                document.getElementById("mysidenav").style.width = "300px"; // unfold side nav
+                document.getElementById("switch").style.display = "none";   // make switch disappear
+                document.getElementById("close").style.display = "none";    // make close disappear
+                // sequence: logo -> sidenav -> switch
+                document.getElementById("mysidenav").style.zIndex = "1";
             }
         }
         $(window).on("resize", resize);

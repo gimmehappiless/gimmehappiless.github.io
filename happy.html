@@ -9,7 +9,7 @@
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="happy.css">
     <title>Product General</title>
     
 </head>
@@ -18,61 +18,69 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-custom" id="main">
         
-        <a class="navbar-brand" href="#" style="width: 200"><img class="logo" src="Logo2.png" alt="logo"></a>
+        <a class="navbar-brand" href="#" style="width: 200">
+            <div class="logo">
+                <div class="tinypattern"><img src="c/2.png" alt="tiny pattern"></div>
+                <div class="tinypattern"><img src="c/2.png" alt="tiny pattern"></div>
+                <div class="tinypattern"><img src="t/2.png" alt="tiny pattern"></div>
+                <div class="tinypattern"><img src="t/2.png" alt="tiny pattern"></div>
+                <div class="tinypattern"><img src="x/2.png" alt="tiny pattern"></div>
+                <div class="tinypattern"><img src="s/2.png" alt="tiny pattern"></div>
+                <div class="gimmehappiless"><img class="logoword" src="logoword/2.png" alt="tiny pattern"></div>
+            </div>
+        </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
             </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul class="nav navbar-nav ml-auto">    
-                <li><a class="nav-item nav-link branding" href="#">Branding <span class="sr-only">(current)</span></a> </li>
-                <li><a class="nav-item nav-link product" href="#">Product</a></li>
+                <li><a class="nav-item nav-link branding" href="branding_brand.html">Branding <span class="sr-only">(current)</span></a> </li>
+                <li><a class="nav-item nav-link product" href="general.html">Product</a></li>
                 <li><a class="nav-item nav-link message" href="#">Message</a></li>
             </ul>
         </div>
         
     </nav>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <div id="mysidenav" class="sidenav">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <a href="general.html" class="other">Fame & Famous</a>
-                    <a href="sexy.html" class="other">Sexy Cutie Pie</a>
-                    <a href="star.html" class="glamorous">Glamorous <br>Pop Star</a>
-                    <a href="happy.html" class="other">Just Be Happy</a>
+
+    <div id="mysidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" id="close" onclick="closeNav()">&times;</a>
+        <a href="general.html" class="other">Fame & Famous</a>
+        <a href="sexy.html" class="other">Sexy Cutie Pie</a>
+        <a href="star.html" class="glamorous">Glamorous <br>Pop Star</a>
+        <a href="happy.html" class="other">Just Be Happy</a>
+    </div>
+
+    <span class="switch" id="switch" onclick="openNav()">open</span>
+
+    <div id="content">
+        <div class="row flex">
+            <div class="toy col-4 order-1">
+                <div class="card" onclick = 'window.location.href = "product.html?4-1";'>
+                    <img class="card-img-top" src="product/4-1.jpg" alt="Card image cap">
+                    <div class="card-body">
+                    <h4 class="card-text">Don’t-worry-be<br>-happy Suit</h4>
+                </div>       
+            </div>
+
+            <div class="toy col-4 order-2">
+                <div class="card" onclick = 'window.location.href = "product.html?4-2";'>
+                    <img class="card-img-top" src="product/4-2.jpg" alt="Card image cap">
+                    <div class="card-body">
+                    <h4 class="card-text">Not-safe-for-work<br> Super Virus</h4>
+                    </div>
                 </div>
             </div>
 
-            <span class="switch" onclick="openNav()">open</span>
-
-            <div id="content">  
-                <div class="col-md-3">
-                    <div class="card" onclick = 'window.location.href = "product.html?4-1";'>
-                        <img class="card-img-top" src="product/4-1.jpg" alt="Card image cap">
-                        <div class="card-body">
-                        <h4 class="card-text">Don’t-worry-be<br>-happy Suit</h4>
-                        </div>
-                    </div>
+            <div class="toy col-4 order-3">
+                <div class="card" onclick = 'window.location.href = "product.html?4-3";'>
+                    <img class="card-img-top" src="product/4-3.jpg" alt="Card image cap">
+                    <div class="card-body">
+                    <h4 class="card-text">Cozy-life Microwave-<br>food and 500 series</h4>
                 </div>
-
-                <div class="col-md-3">
-                    <div class="card" onclick = 'window.location.href = "product.html?4-2";'>
-                        <img class="card-img-top" src="product/4-2.jpg" alt="Card image cap">
-                        <div class="card-body">
-                        <h4 class="card-text">Not-safe-for-work<br> Super Virus</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="card" onclick = 'window.location.href = "product.html?4-3";'>
-                        <img class="card-img-top" src="product/4-3.jpg" alt="Card image cap">
-                        <div class="card-body">
-                        <h4 class="card-text">Cozy-life Microwave-<br>food and 500 series
-                            </h4>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            
+            <div class="whatsup">
+                <a href="#">What's up</a>
             </div>
         </div>
     </div>
@@ -81,19 +89,38 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
-        function direct_to(){
-            window.location.href = 'product.html';
+       /* Set the width of the side navigation to 250px */
+       function openNav() {
+            document.getElementById("mysidenav").style.width = "300px";
+            document.getElementById("close").style.display = "inline";
         }
-
-        /* Set the width of the side navigation to 250px */
-        function openNav() {
-        document.getElementById("mysidenav").style.width = "380px";
-        }
-
-        /* Set the width of the side navigation to 0 */
+    
+            /* Set the width of the side navigation to 0 */
         function closeNav() {
-        document.getElementById("mysidenav").style.width = "0";
+            document.getElementById("mysidenav").style.width = "0";
+            document.getElementById("close").style.display = "none";
         }
+    
+        function resize() {
+            if ( $(window).width() < 990) {     
+                // small window
+                document.getElementById("mysidenav").style.width = "0";     // fold side nav    
+                document.getElementById("switch").style.display = "block";  // make switch appear
+                document.getElementById("close").style.display = "inline";  // make close appear
+                // sequence: sidenav -> switch -> logo    
+                document.getElementById("mysidenav").style.zIndex = "4";    
+            }
+            else {
+                // large window
+                document.getElementById("mysidenav").style.width = "300px"; // unfold side nav
+                document.getElementById("switch").style.display = "none";   // make switch disappear
+                document.getElementById("close").style.display = "none";    // make close disappear
+                // sequence: logo -> sidenav -> switch
+                document.getElementById("mysidenav").style.zIndex = "1";
+            }
+        }
+        $(window).on("resize", resize);
+        resize(); // call once initially
     </script>
 </body>
 </html>

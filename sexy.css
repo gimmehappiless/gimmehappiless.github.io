@@ -8,12 +8,17 @@ body{
 
 
 .navbar-custom{
-    background-color:#fefdf5 !important;    
+    background-color:#fefdf5 !important; 
+    position:fixed;
+    margin-top:5vh;  
+    padding-right:0; 
+    width:100%;
+    z-index:2;
 }
 
 a{
     margin-top:18px;
-    margin-left:8vmin;
+    margin-left:4vw;
 }
 
 ul{
@@ -78,112 +83,165 @@ h1{
 }
 
 .logo{
+    position:relative;
     width:100%;
+    height:auto;
+    z-index:2;
+}
+
+.logo:hover .tinypattern {
+    -webkit-animation: rotation 0.5s 1 linear;
+}
+
+@-webkit-keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}
+
+.tinypattern, .gimmehappiless{
+    display:inline-block;
+}
+
+.tinypattern img{
+    width:15px;
     height:auto;
 }
 
+.tinypattern:nth-child(1){
+    position:absolute;
+    top:-45px;
+    left:15px;
+}
+
+.tinypattern:nth-child(2){
+    position:absolute;
+    top:50px;
+    left:160px;
+}
+
+.tinypattern:nth-child(3){
+    position:absolute;
+    top:-25px;
+    left:180px;
+}
+
+.tinypattern:nth-child(4){
+    position:absolute;
+    top:60px;
+    left:55px;
+}
+
+.tinypattern:nth-child(5){
+    position:absolute;
+    top:-60px;
+    left:100px;
+}
+
+.tinypattern:nth-child(6){
+    position:absolute;
+    top:0px;
+    left:-30px;
+}
+
+
+.logoword{
+    position:absolute;
+    width:150px;
+    height:auto;
+    top:-20px;
+    left:10px; 
+}
+
+
+
 .sidenav {
-    height: 70%; /* Full-height: remove this if you want "auto" height */
-    width: 40vmin; /* Set the width of the sidebar */
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width:300px; 
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
-    top: 30%;
-    left: 5vmin;
+    top:0;
+    left:0;
     background-color:#fefdf5; /* Black */
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
-    
+    padding-top: 40vh;
+    transition:0.5s;
+    z-index: 1;
   }
 
   .sidenav a {
-    display: block;
-    padding-top: 20px;
-    width:40vmin;
     position:relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0;
+    margin-left:0;
+    padding-top:10px;
+    transition:0.3s;
     text-transform:uppercase;
-    color: #686868;
-    font-family: Ubuntu;
+    color:#686868;
+    font-family: 'Ubuntu';
+    font-weight:bold;
     font-style: italic;
     font-stretch: normal;
     line-height: normal;
     letter-spacing: 0.72px;
     text-align: center;
-    margin-left:10px;
-    margin-bottom:2px;
+    font-size:26px;
     text-decoration:none;
-    font-size:20px;
+    
   }
 
-  
-  
-  .other::before{
-      content:'';
-      position:absolute;
-      top:30px;
-      right:0;
-      bottom:0;
-      left:20px;
-      height:2px;
-      width:180px;
-      background-color:#979797;
-      display:none;
-  }
-
-  .other:hover::before{
-    content:'';
-    position:absolute;
-    top:55px;
-    right:0;
-    bottom:0;
-    left:45px;
-    height:2px;
-    width:180px;
-    background-color:#979797;
-    display:flex;
+.sidenav a:not(.closebtn):hover{
+    border-bottom:solid 2px #686868;
 }
 
-  .glamorous::after{
-    content:'';
-    position:absolute;
-    top:90px;
-    right:0;
-    bottom:0;
-    left:58px;
-    height:2px;
-    width:100px;
-    background-color:#979797;
-    display:none;
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    display: none;
   }
 
-  .glamorous:hover::after{
-    content:'';
+#content{
     position:absolute;
-    top:90px;
-    right:0;
-    bottom:0;
-    left:83px;
-    height:2px;
-    width:100px;
-    background-color:#979797;
+    width:65vw;
+    height:auto;
+    top:30vh;
+    left:40vw;
+    padding:0;
     display:flex;
+    flex-direction: initial;
+    justify-content:space-around;
+    
   }
   
- .row{
-     display:flex;
-     height:60%;
-     
- }
+  @media (orientation: portrait), (max-width:992px){
+    #content{
+       left:20vw;
+    }
+}
 
- .card{
-     display:flex;
-     height:60%;
-     box-shadow: 0px 3px 16px 0 rgba(114, 108, 108, 0.25);
-     transition: 0.3s;
-     margin-top:10vmin;
-     margin-right:4vmin;
-     border-radius:16px;
-     
- }
+  .toy{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+  }
+
+  .card{
+    display:flex;
+    flex-direction:column; 
+    box-sizing:border-box;
+    height:17vmax;
+    width:30vmax;
+    box-shadow: 0px 3px 16px 0 rgba(114, 108, 108, 0.25);
+    border-radius:16px; 
+}  
 
  .card img{
      object-fit:cover;
@@ -212,5 +270,46 @@ h1{
     box-shadow: 0px 3px 16px 0 rgba(114, 108, 108, 0.25);
     border-radius:0 0 16px 16px;
  }
+
+ .whatsup{
+    position:fixed;
+    top:43vh;
+    right:0;
+    width: 37px;
+    height: 160px;
+    border-radius: 8px 0 0 8px;
+    box-shadow: 0 2px 5px 0 rgba(142, 141, 141, 0.5);
+    background-color: #ffffff;
+}
+
+.whatsup a{
+    margin:30px auto;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    text-decoration:none;
+    transform: rotate(-180deg);
+    font-family: "Ubuntu";
+    font-size: 20px;
+    font-weight: normal;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.56px;
+    text-align: center;
+    color: #686868;
+}
+
+.switch{
+    background-color:white;
+    position:absolute;
+    top:0;
+    left:0;
+    width:50px;
+    height:80px;
+    border-radius: 0 16px 16px 0;
+    box-shadow: 0 2px 7px 0 rgba(190, 190, 190, 0.49);
+    display: none;
+    z-index: 3;
+}
 
  

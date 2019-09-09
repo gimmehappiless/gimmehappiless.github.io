@@ -19,7 +19,17 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-custom" id="main">
 
-            <a class="navbar-brand" href="index.html" style="width: 200px"><img class="logo" src="Logo2.png" alt="logo"></a>
+            <a class="navbar-brand" href="index.html" style="width: 200px">
+                <div class="logo">
+                    <div class="tinypattern"><img src="c/2.png" alt="tiny pattern"></div>
+                    <div class="tinypattern"><img src="c/2.png" alt="tiny pattern"></div>
+                    <div class="tinypattern"><img src="t/2.png" alt="tiny pattern"></div>
+                    <div class="tinypattern"><img src="t/2.png" alt="tiny pattern"></div>
+                    <div class="tinypattern"><img src="x/2.png" alt="tiny pattern"></div>
+                    <div class="tinypattern"><img src="s/2.png" alt="tiny pattern"></div>
+                    <div class="gimmehappiless"><img class="logoword" src="logoword/2.png" alt="tiny pattern"></div>
+                </div>
+            </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                 </button>
@@ -37,18 +47,19 @@
         <div class="row justify-content-center">
             <div class="col-7 bar">
                 <img src="level bar/bar1.png" alt="game number bar" id="bar">
-                <div class="spin">
+                <div id="spin">
                     <img src="white/1.png">
                     <img src="border/1.png">
                     <img src="orange/1.png">
-                    <img src="lock/3.png">
+                    <img id="lock" src="lock/3.png">
                 </div>
-            </div>
-            
+            </div>  
         </div>
+
         <div class="row coffee">
             <h1 class="question" id="q">Do you prefer cuppucino<br> to americano?</h1>
-        </div>    
+        </div> 
+
         <div class="row flex">
             <div class="col-6 button1">
                 <button onclick="nextQuestion(0)" type="button"class="btn btn-outline-warning btn-lg" id="button" style="margin-right:2vmin;" >NO</button>
@@ -56,7 +67,10 @@
             <div class="col-6 button2">
                 <button onclick="nextQuestion(1)" type="button"class="btn btn-outline-warning btn-lg" id="button" style="margin-left:2vmin;">YES</button>
             </div>
-        </div>         
+        </div>  
+        <div class="whatsup">
+            <a href="#">What's up</a>
+        </div>       
     </div>
 
    
@@ -92,7 +106,8 @@
                 document.getElementById("q").innerHTML = questions[progress-1];
             }
             else{
-                
+                document.getElementById("spin").style.display = "block";
+
                 var sum=0;
                 for (var i = 0; i < answers.length; i++) {
                     sum += answers[i];
@@ -131,9 +146,14 @@
             }
         }
 
-
-
-        
+        function sleep(milliseconds) {
+            var start = new Date().getTime();
+            for (var i = 0; i < 1e7; i++) {
+                if ((new Date().getTime() - start) > milliseconds){
+                    break;
+                }
+            }
+        }        
 
 
     </script>

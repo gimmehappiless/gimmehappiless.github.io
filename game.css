@@ -8,13 +8,13 @@ body{
 
 .navbar-custom{
     background-color:#fefdf5 !important;
-    padding-bottom:0px;
- 
+    margin-top:5vh;  
+    padding-right:0;
 }
 
 a{
     margin-top:18px;
-    margin-left:8vmin; 
+    margin-left:4vw; 
 }
 
 ul{
@@ -56,9 +56,78 @@ li{
 }
 
 .logo{
+    position:relative;
     width:100%;
+    height:auto;  
+}
+
+.logo:hover .tinypattern {
+    -webkit-animation: rotation 0.5s 1 linear;
+}
+
+@-webkit-keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}
+
+.tinypattern, .gimmehappiless{
+    display:inline-block;
+}
+
+.tinypattern img{
+    width:15px;
     height:auto;
 }
+
+.tinypattern:nth-child(1){
+    position:absolute;
+    top:-45px;
+    left:15px;
+}
+
+.tinypattern:nth-child(2){
+    position:absolute;
+    top:50px;
+    left:160px;
+}
+
+.tinypattern:nth-child(3){
+    position:absolute;
+    top:-25px;
+    left:180px;
+}
+
+.tinypattern:nth-child(4){
+    position:absolute;
+    top:60px;
+    left:55px;
+}
+
+.tinypattern:nth-child(5){
+    position:absolute;
+    top:-60px;
+    left:100px;
+}
+
+.tinypattern:nth-child(6){
+    position:absolute;
+    top:0px;
+    left:-30px;
+}
+
+
+.logoword{
+    position:absolute;
+    width:150px;
+    height:auto;
+    top:-20px;
+    left:10px; 
+}
+
 
 #button:hover{
     color:#686868;
@@ -113,65 +182,48 @@ img{
 
 .bar{
     position:relative;
+    padding:0;
 }
 
-.spin{
+.bar img{
+    width:100%;
+    height:auto;
+}
+
+#spin{
     position:absolute;
 	top:0;
 	right:0;
 	bottom:0;
-    left:84%;
-    width:10%;
-    height:90%;
+    width:12.5%;
+    height:100%;
     z-index:1;
-    
+    display: none;
 }
-.spin img{
+#spin img{
+    width: 100%;
+    height: 100%;
 	position:absolute;
-	object-fit: contain;
 }
-
-.spin img:nth-child(1){
-    width:100%;
-    height:auto;
-    padding:0;
-    position:absolute;
-    top:1%;
-	right:0;
-	bottom:0;
-    left:5%;
- }
  
-.spin img:nth-child(2){
-    width:100%;
-    height:auto;
-    padding:0;
-    position:absolute;
-    top:1%;
-	right:0;
-	bottom:0;
-    left:5%;
- }
- 
-.spin img:nth-child(3){
-   width:90%;
-   height:auto;
-   margin:0 0.3vw;
+#spin img:nth-child(3){
    animation-name: spin;
    animation-duration:1.2s;
    animation-iteration-count:2;
    animation-timing-function: linear; 
 }
 
-.spin img:nth-child(4){
-    width:45%;
+#spin img:nth-child(4){
+    position:absolute;
+    top:8%;
+    left:25%;
+    width:50%;
     height:auto;
-    margin:15% 30%;
     animation-name:big;
-   animation-duration:2s;
-   animation-iteration-count:1;
-   animation-timing-function: linear; 
-}
+    animation-duration:2s;
+    animation-iteration-count:1;
+    animation-timing-function: linear; 
+} 
 
 @keyframes spin {
     from {
@@ -195,4 +247,32 @@ img{
     100%{
         transform:scale(1,1);
     }
+}
+
+.whatsup{
+    position:fixed;
+    top:43vh;
+    right:0;
+    width: 37px;
+    height: 160px;
+    border-radius: 8px 0 0 8px;
+    box-shadow: 0 2px 5px 0 rgba(142, 141, 141, 0.5);
+    background-color: #ffffff;
+}
+
+.whatsup a{
+    margin:30px auto;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    text-decoration:none;
+    transform: rotate(-180deg);
+    font-family: "Ubuntu";
+    font-size: 20px;
+    font-weight: normal;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.56px;
+    text-align: center;
+    color: #686868;
 }
