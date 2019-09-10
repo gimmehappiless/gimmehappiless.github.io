@@ -41,38 +41,34 @@
         </div>
         
     </nav>
-    <div class="container">
+
+    <div id="mysidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" id="close" onclick="closeNav()">&times;</a>
+        <a class="nav-link" href="branding_brand.html">Our Brand</a>
+        <a class="nav-link" href="goal.html">Our Goal</a>
+    </div>
+
+    <span class="switch" id="switch" onclick="openNav()">open</span>
+
+    <div id="content">
         <div class="row">
-            <div class="col-md-3">
-                <div id="mysidenav" class="sidenav">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <a href="general.html" class="other">Fame & Famous</a>
-                    <a href="sexy.html" class="other">Sexy Cutie Pie</a>
-                    <a href="star.html" class="glamorous">Glamorous <br>Pop Star</a>
-                    <a href="happy.html" class="other">Just Be Happy</a>
-                </div>
-            </div>
-
-            <span class="switch" onclick="openNav()">open</span>
-
-
             <div class="col-md-9">
-                    <div class="pattern">
-                        <img src="redtri/1.png" alt="pattern">
-                    </div>
-                    <div class="pattern">
-                        <img src="circle/1.png" alt="pattern">
-                    </div>
-                    <div class="pattern">
-                        <img src="cross/1.png" alt="pattern">
-                    </div>
-                <div class="text">
+                <div class="pattern">
+                    <img src="redtri/1.png" alt="pattern">
+                </div>
+                <div class="pattern">
+                    <img src="circle/1.png" alt="pattern">
+                </div>
+                <div class="pattern">
+                    <img src="cross/1.png" alt="pattern">
+                </div>
+                <div class="contentword">
                     <p>We were taught to be happy; otherwise, we are wasting our lives!!!</p>
-                    <p>We ought to be happy every day, and every hour. Despite the fact that we are totally the opposite, we still have to “look” happy and live a life that makes everyone envy us. Since this is the reason we live for, and this makes our lives meaningful!</p>
+                    <p>We ought to be happy every day, and every hour. Despite the fact that we are totally the opposite, we still have to “look” happy and live a life that makes everyone envy us. Since this is the reason we live for, and this makes our lives meaningful!<br>
                         
-                    <p>There are several ways to achieve “happy.” First of all, we have to know the factor that makes us upset. Upset comes from the dissatisfaction with the current phase of life. In other words, we must be lacking something. Consequently, we often fill in our vacancy with material processes.</p>
+                    There are several ways to achieve “happy.” First of all, we have to know the factor that makes us upset. Upset comes from the dissatisfaction with the current phase of life. In other words, we must be lacking something. Consequently, we often fill in our vacancy with material processes.<br>
                         
-                    <p>If we are confronted with a painful experience, we should pretend that the thing has never happened, or even has never existed. Because the past already passed, carpe diem is the most essential thing to do. We don’t even have to plan the future in advance, all we have to do at this moment is to enjoy it to the max!</p>
+                    If we are confronted with a painful experience, we should pretend that the thing has never happened, or even has never existed. Because the past already passed, carpe diem is the most essential thing to do. We don’t even have to plan the future in advance, all we have to do at this moment is to enjoy it to the max!</p>
                         
                     <p> Choose us and so long, those crying nights in bed!!!</p>
                 </div>
@@ -90,23 +86,32 @@
     <script>
         /* Set the width of the side navigation to 250px */
         function openNav() {
-        document.getElementById("mysidenav").style.width = "300px";
-        document.getElementById("close").style.display = "inline";
+            document.getElementById("mysidenav").style.width = "300px";
+            document.getElementById("close").style.display = "inline";
         }
 
         /* Set the width of the side navigation to 0 */
         function closeNav() {
-        document.getElementById("mysidenav").style.width = "0";
-        document.getElementById("close").style.display = "none";
+            document.getElementById("mysidenav").style.width = "0";
+            document.getElementById("close").style.display = "none";
         }
 
         function resize() {
             if ( $(window).width() < 990) {     
-                document.getElementById("mysidenav").style.width = "0";
+                // small window
+                document.getElementById("mysidenav").style.width = "0";     // fold side nav    
+                document.getElementById("switch").style.display = "block";  // make switch appear
+                document.getElementById("close").style.display = "inline";  // make close appear
+                // sequence: sidenav -> switch -> logo    
+                document.getElementById("mysidenav").style.zIndex = "4";    
             }
             else {
-                document.getElementById("mysidenav").style.width = "300px";
-                document.getElementById("close").style.display = "none";
+                // large window
+                document.getElementById("mysidenav").style.width = "300px"; // unfold side nav
+                document.getElementById("switch").style.display = "none";   // make switch disappear
+                document.getElementById("close").style.display = "none";    // make close disappear
+                // sequence: logo -> sidenav -> switch
+                document.getElementById("mysidenav").style.zIndex = "1";
             }
         }
         $(window).on("resize", resize);
