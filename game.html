@@ -108,52 +108,66 @@
             else{
                 document.getElementById("spin").style.display = "block";
 
-                var sum=0;
-                for (var i = 0; i < answers.length; i++) {
-                    sum += answers[i];
-                };      
-                    
-                if(sum <= 1){
-                    result = "ignore";
-                }
+                /* Listen for a animation! */
+                var animationEvent = whichAnimationEvent();
+                animationEvent && this.addEventListener(animationEvent, function() {
+                    var sum=0;
+                    for (var i = 0; i < answers.length; i++) {
+                        sum += answers[i];
+                    };      
+                        
+                    if(sum <= 1){
+                        result = "ignore";
+                    }
 
-                else if(sum <=3){
-                    result = "sexy";
-                }
+                    else if(sum <=3){
+                        result = "sexy";
+                    }
 
-                else if(sum <=5){
-                    result = "success";
-                }
+                    else if(sum <=5){
+                        result = "success";
+                    }
 
-                else{
-                    result = "like";
-                }
-               
-                switch (result) {
-                    case "ignore":
-                        window.location.href = "result.html?ignore";
-                        break;
-                    case "sexy":
-                        window.location.href = "result.html?sexy";
-                        break;
-                    case "success":
-                        window.location.href = "result.html?success";
-                        break;
-                    case "like":
-                        window.location.href = "result.html?like";
-                        break;
+                    else{
+                        result = "like";
+                    }
+                
+                    switch (result) {
+                        case "ignore":
+                            window.location.href = "result.html?ignore";
+                            break;
+                        case "sexy":
+                            window.location.href = "result.html?sexy";
+                            break;
+                        case "success":
+                            window.location.href = "result.html?success";
+                            break;
+                        case "like":
+                            window.location.href = "result.html?like";
+                            break;
+                    }
+                });
+            }
+        }
+
+        /* From Modernizr */
+        function whichAnimationEvent(){
+            var t;
+            var el = document.createElement('fakeelement');
+            var animations = {
+            'animation':'animationend',
+            'OAnimation':'oAnimationEnd',
+            'MozAnimation':'animationend',
+            'WebkitAnimation':'webkitAnimationEnd'
+            }
+
+            for(t in animations){
+                if( el.style[t] !== undefined ){
+                    return animations[t];
                 }
             }
         }
 
-        function sleep(milliseconds) {
-            var start = new Date().getTime();
-            for (var i = 0; i < 1e7; i++) {
-                if ((new Date().getTime() - start) > milliseconds){
-                    break;
-                }
-            }
-        }        
 
 
     </script>

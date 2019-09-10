@@ -55,6 +55,11 @@ li{
     border-bottom: 2px solid #f8c05e;
 }
 
+.content{
+    position:relative;
+    margin-top:10vh;
+}
+
 .logo{
     position:relative;
     width:100%;
@@ -195,7 +200,7 @@ img{
 	top:0;
 	right:0;
 	bottom:0;
-    width:12.5%;
+    width:11.5%;
     height:100%;
     z-index:1;
     display: none;
@@ -209,7 +214,7 @@ img{
 #spin img:nth-child(3){
    animation-name: spin;
    animation-duration:1.2s;
-   animation-iteration-count:2;
+   animation-iteration-count:3;
    animation-timing-function: linear; 
 }
 
