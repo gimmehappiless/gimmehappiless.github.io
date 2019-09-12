@@ -78,7 +78,24 @@
         </div>
     </div>
      
+    <!-- whatsup popup window-->
 
+     <div class="what-modal">
+        <div class="what-content">
+            <div class="closex">+</div>
+            <p>You are now...</p>
+            <div class="face row flex">
+                <img class="col-3" src="smileface/2.png" alt="smileface">
+                <img class="col-3" src="heartface/2.png" alt="heartface">
+                <img class="col-3" src="blueface/2.png" alt="blueface">
+                <img class="col-3" src="cryface/2.png" alt="cryface">
+            </div>
+            <div class="feedback row flex">
+                <input placeholder=" Say anything to us" id="say" type="text">
+                <button id="send" type="button" class="btn btn-light">send</button>
+            </div>
+        </div>
+    </div>   
     
 
    
@@ -119,6 +136,14 @@
         }
         $(window).on("resize", resize);
         resize(); // call once initially
+
+        document.querySelector('.whatsup').addEventListener("click", function() {
+	    document.querySelector('.what-modal').style.display = "flex";
+        });
+
+        document.querySelector('.closex').addEventListener("click", function() {
+        document.querySelector('.what-modal').style.display = "none";
+        });
     </script>
 </body>
 </html>
